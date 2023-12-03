@@ -5,20 +5,20 @@
 class Imup < Formula
   desc "imweb internal toolkit"
   homepage "https://www.imweb.me"
-  version "0.1.15"
+  version "0.1.17"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.15/imup_0.1.15_darwin_amd64.tar.gz"
-      sha256 "149975d1278f763cae1ec0a927e005a2a1886d64081a225c5392f736794ec24a"
+      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.17/imup_0.1.17_darwin_amd64.tar.gz"
+      sha256 "0a34d58474ed30a4deedcdd26260ac7ee1866636c4c023d86d624ab4be8a3714"
 
       def install
         bin.install "imup"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.15/imup_0.1.15_darwin_arm64.tar.gz"
-      sha256 "8bac8b460b2a7087c4b6c6258a51dfbea5ee56e3286f05297867d86626f9a598"
+      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.17/imup_0.1.17_darwin_arm64.tar.gz"
+      sha256 "d88d4ac7bae09aa29a67be5a1defc762b95a2961b096fd512af4a5348128c48d"
 
       def install
         bin.install "imup"
@@ -28,16 +28,16 @@ class Imup < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.15/imup_0.1.15_linux_amd64.tar.gz"
-      sha256 "0421104a0f4ee9ac4f0a574d2ee98704be32cb0260c775a07e934a610cd9b433"
+      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.17/imup_0.1.17_linux_amd64.tar.gz"
+      sha256 "63b231eb2fd8287633202f796e0b5884c95cccf752eeb4dbae31d6f12e36588c"
 
       def install
         bin.install "imup"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.15/imup_0.1.15_linux_arm64.tar.gz"
-      sha256 "389bd18dca874d0c9362e1b5d0ba1fad2882d22cd1bd5f536509d7a8d3a9c1ae"
+      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.17/imup_0.1.17_linux_arm64.tar.gz"
+      sha256 "27be38221fdf37c35aafd49585eded4fd0bf6bc1ba189156b2a08892ecae2c48"
 
       def install
         bin.install "imup"
