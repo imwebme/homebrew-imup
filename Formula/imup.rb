@@ -5,20 +5,20 @@
 class Imup < Formula
   desc "imweb internal toolkit"
   homepage "https://www.imweb.me"
-  version "0.1.29"
+  version "0.1.31"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.29/imup_0.1.29_darwin_arm64.tar.gz"
-      sha256 "c525f1042eb7dbf6e391b617e934288d37d1efe76400c1f5e63f76f30d20b549"
+      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.31/imup_0.1.31_darwin_arm64.tar.gz"
+      sha256 "4bd40f94a09549c54afc54e62873d39f3d3021e613eb8b006c03d5371030e280"
 
       def install
         bin.install "imup"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.29/imup_0.1.29_darwin_amd64.tar.gz"
-      sha256 "550d4fb49181ee9422fd96a51584ddd72dfd95497e1bc471db9b4a854e9ccbc8"
+      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.31/imup_0.1.31_darwin_amd64.tar.gz"
+      sha256 "b455203ef142642140822cbc6f999667fdee0a7acf3c0c50bcaaeefd454b9ef6"
 
       def install
         bin.install "imup"
@@ -27,17 +27,17 @@ class Imup < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.29/imup_0.1.29_linux_amd64.tar.gz"
-      sha256 "861afa39d74559f643a479fab60c5996295b535aee20702023b353db09f904cc"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.31/imup_0.1.31_linux_arm64.tar.gz"
+      sha256 "0ded8d8977da9fb0891e7056cd36f0bde044a343636da58fef06f7ee1664d131"
 
       def install
         bin.install "imup"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.29/imup_0.1.29_linux_arm64.tar.gz"
-      sha256 "f150e3656a58f95b8873d5e780ea5e486638a7f1f905f81c0601e341473408aa"
+    if Hardware::CPU.intel?
+      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.31/imup_0.1.31_linux_amd64.tar.gz"
+      sha256 "ef5231573af56552f85c3158818e5deb4e7df676b948dcac3ec82d671520421d"
 
       def install
         bin.install "imup"
