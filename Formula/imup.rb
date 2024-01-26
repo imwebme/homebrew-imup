@@ -5,20 +5,20 @@
 class Imup < Formula
   desc "imweb internal toolkit"
   homepage "https://www.imweb.me"
-  version "0.1.35"
+  version "0.1.36"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.35/imup_0.1.35_darwin_amd64.tar.gz"
-      sha256 "5cca1779e86c5c5be76bdc867ca2a315210c887cf51b77ac7a72bb643ac4e534"
+    if Hardware::CPU.arm?
+      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.36/imup_0.1.36_darwin_arm64.tar.gz"
+      sha256 "7d69c7f36d770cb40721fc2fbfb71473cd2e0cc617d44f9f703631b54f7f940f"
 
       def install
         bin.install "imup"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.35/imup_0.1.35_darwin_arm64.tar.gz"
-      sha256 "cd3416c4665ebaebaf9882e2f0eba9c3158189517c4829f4d282a7179e3713bc"
+    if Hardware::CPU.intel?
+      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.36/imup_0.1.36_darwin_amd64.tar.gz"
+      sha256 "4550e87b7b510ff2599126ad17558fde23b29dbb7b12a55906b2c06117a646cc"
 
       def install
         bin.install "imup"
@@ -28,16 +28,16 @@ class Imup < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.35/imup_0.1.35_linux_amd64.tar.gz"
-      sha256 "b0bbe1b2200115553875de57946a71d2f8a3cea9d4903fa90230894041edf784"
+      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.36/imup_0.1.36_linux_amd64.tar.gz"
+      sha256 "2f825a6fb46503760e2dc7836e28ee0e0e72aa6e0f4a1928be09e49a583654be"
 
       def install
         bin.install "imup"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.35/imup_0.1.35_linux_arm64.tar.gz"
-      sha256 "a04f76c3bf7fec3f17ae3b1e33894bd2bcdb2fd9187e94c7965591b7b3eaf6d7"
+      url "https://github.com/imwebme/homebrew-imup/releases/download/v0.1.36/imup_0.1.36_linux_arm64.tar.gz"
+      sha256 "2843a6f523aeec3c78a5314974795becbc61c4dff8f52535e4d5312ceaa3e037"
 
       def install
         bin.install "imup"
